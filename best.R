@@ -21,11 +21,6 @@
 
 setwd("C:/Users/Gyorgy Szelezsan/Documents/GitHub/ProgrammingAssignment3")
 
-outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
-head(outcome)
-outcome[, 11] <- as.numeric(outcome[, 11])
-hist(outcome[, 11])
-
 best <- function(state, outcome) {
       options(warn=-1)                    # turning OFF warning messages (because they annoy me)
       
@@ -71,3 +66,8 @@ best("MD", "heart attack")
 best("MD", "pneumonia")
 best("BB", "heart attack")
 best("NY", "hert attack")
+
+
+best("SC", "heart attack")
+best("NY", "pneumonia")
+best("AK", "pneumonia")

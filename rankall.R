@@ -83,3 +83,6 @@ rankall <- function(outcome, num = "best") {
 head(rankall("heart attack", 20), 10)
 tail(rankall("pneumonia", "worst"), 3)
 tail(rankall("heart failure"), 10)
+
+r <- rankall("heart attack", 4)
+as.character(subset(r, State == "HI")$Hospital.Name)
